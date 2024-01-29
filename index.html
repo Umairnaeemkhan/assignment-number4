@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table and Factorial</title>
+</head>
+<body>
+
+    <script>
+        // Multiplication Table
+        function generateMultiplicationTable() {
+            var number = parseInt(prompt("Enter a number:"));
+            var multiplicationTable = "";
+
+            for (var i = 1; i <= 10; i++) {
+                multiplicationTable += number + " x " + i + " = " + (number * i) + "<br>";
+            }
+
+            document.getElementById("multiplicationTable").innerHTML = multiplicationTable;
+        }
+
+        // Factorial Calculation
+        function calculateFactorial() {
+            var number = 5; // Factorial of 5
+            var factorial = 1;
+            var i = 1;
+
+            while (i <= number) {
+                factorial *= i;
+                i++;
+            }
+
+            document.getElementById("factorialResult").innerHTML = "Factorial of 5 (!5) is: " + factorial;
+        }
+    </script>
+
+    <button onclick="generateMultiplicationTable()">Generate Multiplication Table</button>
+    <div id="multiplicationTable"></div>
+
+    <button onclick="calculateFactorial()">Calculate Factorial</button>
+    <div id="factorialResult"></div>
+
+</body>
+</html>
